@@ -1,16 +1,30 @@
-set nocompatible " Disable vi compatibility
-set nu           " Show line number 
-syntax on        
-set hlsearch     " Highlight search
-set ruler
-set nowrap   
+set nocompatible    " Disable vi compatibility
+filetype off        " required
+syntax on           " 语法高亮
+set number          " 显示行号
+set nowrap          " 不换行
+set hlsearch        " 搜索结果高亮
+set smartindent     " 智能缩进
+set ruler           " 在状态栏显示当前光标位置
+set bg=dark         " 设置背景风格为dark
 set helplang=cn
-set bg=dark
-" move support 
-" http://vim.wikia.com/wiki/Moving_lines_up_or_down
-nnoremap ∆ :m .+1<CR>==
-nnoremap ˚ :m .-2<CR>==
-inoremap ∆ <Esc>:m .+1<CR>==gi
-inoremap ˚ <Esc>:m .-2<CR>==gi
-vnoremap ∆ :m '>+1<CR>gv=gv
-vnoremap ˚ :m '<-2<CR>gv=gv
+set fencs=utf-8
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
+
+	" Vundle插件支持  required
+	 Plugin 'VundleVim/Vundle.vim'    
+
+        "文件跳转插件	 
+	 Plugin 'git://git.wincent.com/command-t.git'
+
+
+call vundle#end()            " required
+
+
+
