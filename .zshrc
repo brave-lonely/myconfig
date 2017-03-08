@@ -54,8 +54,13 @@ plugins=(git z vi-mode osx)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export MANPATH="/usr/local/man:$MANPATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+
+export PATH=$PATH:$HOME/bin:/usr/local/opt/mysql@5.6/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 source $ZSH/oh-my-zsh.sh
 
 
@@ -83,7 +88,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# source ~/.aegis-profile
-export LC_ALL=en_US.UTF-8
-export NVM_DIR="/Users/xiangyang/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
