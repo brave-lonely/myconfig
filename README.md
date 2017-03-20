@@ -26,7 +26,7 @@ OSX中自带了ruby，所以Homebrew安装起来也非常容易：
  [下载地址](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 
 ### maven
-直接用brew isntall maven 就可以,没有版本限制，安装最新即可。
+直接用brew install maven 就可以,没有版本限制，安装最新即可。
 
 
 ### idea 
