@@ -22,8 +22,8 @@ OSX中自带了ruby，所以Homebrew安装起来也非常容易：
 
 
 ### jdk(version: "1.8.0_121")
- [下载地址](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 
+ [下载地址](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 
 ### maven
 直接用brew isntall maven 就可以,没有版本限制，安装最新即可。
@@ -31,8 +31,7 @@ OSX中自带了ruby，所以Homebrew安装起来也非常容易：
 
 ### idea 
 idea 建议下载官方推荐的toolbox,它带了所有idea官方的ide,安装升级都很方便。
-[下载地址](https://www.jetbrains.com/toolbox/app/?fromMenu)
-
+ [下载地址](https://www.jetbrains.com/toolbox/app/?fromMenu) 
 
 ### nvm (version : v.0.33.1)
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
