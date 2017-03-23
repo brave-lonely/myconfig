@@ -10,9 +10,7 @@ Develop on OSX
 
 ### Homebrew
 
-首先安装Homebrew，官网的一句话介绍很准确地描述了这个软件的功能：
-
-OSX中自带了ruby，所以Homebrew安装起来也非常容易：
+首先安装Homebrew，OSX中自带了ruby，所以Homebrew安装起来也非常容易：
 
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
 
