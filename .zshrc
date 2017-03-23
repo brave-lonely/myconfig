@@ -55,7 +55,6 @@ plugins=(git z vi-mode osx)
 # User configuration
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-
 export PATH=$PATH:$HOME/bin:/usr/local/opt/mysql@5.6/bin
 
 export NVM_DIR="$HOME/.nvm"
@@ -89,3 +88,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias machine="docker-machine"
+alias mls="docker-machine ls";
+alias cloud="docker cloud"
+alias swarn="docker swarm"
+alias compose="docker compose"
+alias fig="docker-compose"
+
+alias mstart="docker-machine start; use testing";
+alias mstop="docker-machine stop";
+
+set -o vi 
