@@ -1,14 +1,36 @@
 set nocompatible	    " Disable vi compatibility
-filetype off		    " required
-syntax on		    " 语法高亮
-set number		    " 显示行号
-set nowrap		    " 不换行
+set nu                  " 显示行号
+filetype on                 
+filetype plugin on         
+filetype indent on        
+syntax on		    
+
+
+set autoread
+set mouse=a
+
+set tabstop=4
+set shiftwidth=4  " 设定>>移动时宽度为4
+set softtabstop=4 " 使用退格键一删除4个空格
+" set smarttab      " 智能缩进
+set wrap          " 自动换行
+
+set pastetoggle=<F9> " 粘贴不换行问题解决办法
+
+" 开启新行时，使用自动缩进
+set smartindent
+set cin
+set showmatch
+
+
 set hlsearch		    " 搜索结果高亮
-set ruler		    " 在状态栏显示当前光标位置
-set bg=dark                 " 设置背景风格为dark
+set ruler		        " 在状态栏显示当前光标位置
+set bg=dark             " 设置背景风格为dark
 set helplang=cn
-set fencs=utf-8
-set clipboard=unnamed
+
+set encoding=utf-8
+set fileencodings=utf-8
+set termencoding=utf-8
 
 
 " set the runtime path to include Vundle and initialize

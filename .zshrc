@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/xiangyang/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,12 +50,15 @@ ZSH_THEME="apple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z vi-mode osx)
+plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 
 # User configuration
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
 export PATH=$PATH:$HOME/bin:/usr/local/opt/mysql@5.6/bin
+
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -88,14 +91,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias machine="docker-machine"
-alias mls="docker-machine ls";
-alias cloud="docker cloud"
-alias swarn="docker swarm"
-alias compose="docker compose"
-alias fig="docker-compose"
-
-alias mstart="docker-machine start; use testing";
-alias mstop="docker-machine stop";
 
 set -o vi 
