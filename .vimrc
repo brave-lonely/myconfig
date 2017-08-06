@@ -1,24 +1,19 @@
-set nocompatible	    " Disable vi compatibility
+set nocompatible	    " 关闭兼容模式
 set nu                  " 显示行号
-filetype on                 
+filetype on             " 开启文件检测支持     
 filetype plugin on         
 filetype indent on        
-syntax on		    
+syntax enable           " 开启语法
 
 
-set autoread
-set mouse=a
+set tabstop=4         " 设置所有的tab和缩进为4个空格
+set shiftwidth=4	  " 设定>>移动时宽度为4
+set softtabstop=4	  " 使用退格键一删除4个空格
+set wrap			  " 自动换行
+set pastetoggle=<F9>  " 粘贴不换行问题解决办法
 
-set tabstop=4
-set shiftwidth=4  " 设定>>移动时宽度为4
-set softtabstop=4 " 使用退格键一删除4个空格
-" set smarttab      " 智能缩进
-set wrap          " 自动换行
 
-set pastetoggle=<F9> " 粘贴不换行问题解决办法
-
-" 开启新行时，使用自动缩进
-set smartindent
+set smartindent       " 开启新行时，使用自动缩进
 set cin
 set showmatch
 
@@ -31,6 +26,15 @@ set helplang=cn
 set encoding=utf-8
 set fileencodings=utf-8
 set termencoding=utf-8
+
+"  创建*.sh文件时显示作者
+autocmd BufNewFile *.sh  exec ":call SetTitle()"
+func SetTitle()
+    if expand("%:e") == 'sh'
+        call setline(1,"#!/bin/bash")
+        call setline(2,"#Created by xiangyang".strftime(" %F"))
+    endif
+endfunc
 
 
 " set the runtime path to include Vundle and initialize
