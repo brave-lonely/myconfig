@@ -56,7 +56,9 @@ plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
-export PATH=$PATH:$HOME/bin:/usr/local/opt/mysql@5.6/bin
+export PATH=$HOME/bin:$PATH
+export PATH=/usr/local/opt/mysql@5.6/bin:$PATH
+export PATH=/usr/local/opt/mongodb@3.2/bin:$PATH 
 
 
 
@@ -90,6 +92,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
+alias  mongod="mongod --dbpath ~/data/mongo --logpath ~/data/mongo.log &"
 set -o vi 
