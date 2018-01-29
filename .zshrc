@@ -56,9 +56,15 @@ plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
+export HOMEBREW_GITHUB_API_TOKEN="fe99b63173c3e2e80ed2efcb45d3f458d1a527b0"
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/opt/mysql@5.6/bin:$PATH
 export PATH=/usr/local/opt/mongodb@3.2/bin:$PATH 
+
+# jenv
+export PATH=$HOME/.jenv/bin:$PATH
+eval "$(jenv init -)"
+ 
 
 
 
