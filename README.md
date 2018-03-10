@@ -23,6 +23,9 @@ Develop on OSX
 
  [下载地址](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 
+### jenv(Manage your Java environment)
+ [在线地址](http://www.jenv.be)
+
 ### maven
 直接用brew install maven 就可以,没有版本限制，安装最新即可。
 
