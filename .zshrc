@@ -56,7 +56,7 @@ plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
-export HOMEBREW_GITHUB_API_TOKEN="5ce61609b1bcb8f5025283c93e78c809cae8d01d"
+export HOMEBREW_GITHUB_API_TOKEN="b9ffb3c3942556a6d0bcfb2faf8c6f2761a3fa37"
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/opt/mysql@5.6/bin:$PATH
 export PATH=/usr/local/opt/mongodb@3.2/bin:$PATH 
@@ -100,3 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias  mongod="mongod --dbpath ~/data/mongo --logpath ~/data/mongo.log &"
 set -o vi 
+# 开启termial代理
+export http_proxy="http://127.0.0.1:8118"
+export https_proxy=$http_proxy
