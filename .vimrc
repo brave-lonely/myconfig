@@ -10,7 +10,8 @@ set tabstop=4         " 设置所有的tab和缩进为4个空格
 set shiftwidth=4	  " 设定>>移动时宽度为4
 set softtabstop=4	  " 使用退格键一删除4个空格
 set wrap			  " 自动换行
-set pastetoggle=<F9>  " 粘贴不换行问题解决办法
+set pastetoggle=<F9>  " 粘贴代码时的开关,为了解决格式缩进
+set clipboard=unnamed " vim寄存器和操作系统剪切板互通 
 
 
 set smartindent       " 开启新行时，使用自动缩进
