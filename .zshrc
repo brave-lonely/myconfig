@@ -54,22 +54,30 @@ plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 
 # User configuration
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
-export HOMEBREW_GITHUB_API_TOKEN="b9ffb3c3942556a6d0bcfb2faf8c6f2761a3fa37"
-export PATH=$HOME/bin:$PATH
-export PATH=/usr/local/opt/mysql@5.6/bin:$PATH
-export PATH=/usr/local/opt/mongodb@3.2/bin:$PATH 
+
+export HOMEBREW_GITHUB_API_TOKEN="5a1e1091ea2e5a6ee15e63346259a5346dac6b1d"
+export LDFLAGS="-L/usr/local/opt/openresty-openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openresty-openssl/include"
+
+export PATH="$HOME/bin:~/workspace/devtool/protoc-3.3.0-osx-x86_64/bin:/usr/local/opt/maven@3.5/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/opt/openresty-openssl/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# autojump configuration
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+
+
 
 # jenv
-export PATH=$HOME/.jenv/bin:$PATH
-eval "$(jenv init -)"
+#export PATH=$HOME/.jenv/bin:$PATH
+#eval "$(jenv init -)"
  
 
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,7 +107,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias  mongod="mongod --dbpath ~/data/mongo --logpath ~/data/mongo.log &"
-set -o vi 
+alias  jdwp_start="java  -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5050"
+alias  tldrl="tldr -p linux"
+alias  tldrm="tldr -p osx"
+
+
 # 开启termial代理
 export http_proxy="http://127.0.0.1:8118"
 export https_proxy=$http_proxy
+
+# 设置命令行vi模式
+set -o vi 
