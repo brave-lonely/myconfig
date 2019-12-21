@@ -57,12 +57,19 @@ plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
 
-export HOMEBREW_GITHUB_API_TOKEN="5a1e1091ea2e5a6ee15e63346259a5346dac6b1d"
 export LDFLAGS="-L/usr/local/opt/openresty-openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openresty-openssl/include"
 
 export PATH="$HOME/bin:~/workspace/devtool/protoc-3.3.0-osx-x86_64/bin:/usr/local/opt/maven@3.5/bin:$PATH"
 export PATH="/usr/local/sbin:/usr/local/opt/openresty-openssl/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
+# export PATH="/usr/local/opt/go@1.10/bin:$PATH"
+
+
+
+export HOMEBREW_GITHUB_API_TOKEN="132b41232c883338ae45b1a733df3d8fb602422a"
+
+
+
 
 # autojump configuration
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -73,11 +80,6 @@ export PATH="/usr/local/sbin:/usr/local/opt/openresty-openssl/bin:/usr/local/opt
 # jenv
 #export PATH=$HOME/.jenv/bin:$PATH
 #eval "$(jenv init -)"
- 
-
-
-
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,14 +109,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias  mongod="mongod --dbpath ~/data/mongo --logpath ~/data/mongo.log &"
-alias  jdwp_start="java  -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5050"
 alias  tldrl="tldr -p linux"
 alias  tldrm="tldr -p osx"
+alias  start_t1="VBoxManage startvm tmp1  -type headless"
+alias  stop_t1="VBoxManage controlvm tmp1  poweroff"
 
 
 # 开启termial代理
-export http_proxy="http://127.0.0.1:8118"
-export https_proxy=$http_proxy
+# export http_proxy="http://127.0.0.1:1087"
+# export https_proxy=$http_proxy
 
 # 设置命令行vi模式
 set -o vi 
+# 设置zsh支持通配符 
+setopt nonomatch
+
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+#[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
