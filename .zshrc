@@ -66,7 +66,7 @@ export PATH="/usr/local/sbin:/usr/local/opt/openresty-openssl/bin:/usr/local/opt
 
 
 
-export HOMEBREW_GITHUB_API_TOKEN="132b41232c883338ae45b1a733df3d8fb602422a"
+export HOMEBREW_GITHUB_API_TOKEN="911874f2320928cc81014207a0e96ab7c0f1ac16"
 
 
 
@@ -111,13 +111,16 @@ source $ZSH/oh-my-zsh.sh
 alias  mongod="mongod --dbpath ~/data/mongo --logpath ~/data/mongo.log &"
 alias  tldrl="tldr -p linux"
 alias  tldrm="tldr -p osx"
-alias  start_t1="VBoxManage startvm tmp1  -type headless"
-alias  stop_t1="VBoxManage controlvm tmp1  poweroff"
+alias  vblist="VBoxManage  list vms"
+alias  vblist_run="VBoxManage  list runningvms"
+alias  start_wg0="sudo wg-quick  up wg0"
+alias  stop_wg0="sudo wg-quick  down wg0"
+
 
 
 # 开启termial代理
-# export http_proxy="http://127.0.0.1:1087"
-# export https_proxy=$http_proxy
+# export http_proxy="http://127.0.0.1:8118"
+# export https_proxy="https://127.0.0.1:8118"
 
 # 设置命令行vi模式
 set -o vi 
@@ -128,4 +131,13 @@ setopt nonomatch
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 #[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+
+start_machine(){
+   VBoxManage startvm $1 -type headless
+}
+
+stop_machine(){
+  VBoxManage controlvm $1 poweroff
+}
 
