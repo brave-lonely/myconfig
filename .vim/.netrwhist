@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/zhangxiangyang/Downloads/wpsdemo/src/main'
+let g:netrw_dirhist_6='/Users/zhangxiangyang/Downloads/wpsdemo/src/main/java'
+let g:netrw_dirhist_5='/Users/zhangxiangyang/tmp/gen/com/yimei/cfca/ra/entity'
+let g:netrw_dirhist_4='/Users/zhangxiangyang/.ssh'
+let g:netrw_dirhist_3='/Users/zhangxiangyang/workspace/java/aegis-all/cfca/bin/sealConfig'
+let g:netrw_dirhist_2='/Users/zhangxiangyang/workspace/java/aegis-all/aegis-member/static/scripts/login'
+let g:netrw_dirhist_1='/Users/zhangxiangyang/.ssh/yimei'
+let g:netrw_dirhist_0='/Users/zhangxiangyang/workspace/java/aegis-all/ccs-trade-android/app/src/main/java/com/ccs/ymzs/event'
+let g:netrw_dirhist_9='/Users/zhangxiangyang/workspace/java/aegis-all/ccs-trade-android/app/src/main/java/com/ccs/ymzs'
+let g:netrw_dirhist_8='/Users/zhangxiangyang/workspace/java/aegis-all/ccs-trade-android/app/src/main/java/com/ccs'

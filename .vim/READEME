@@ -1,0 +1,9 @@
+# vim插件相关
+bundle 
+
+#nginx配置文件语法高亮
+ftdetect
+ftplugin
+indent
+syntax
+
