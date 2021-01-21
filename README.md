@@ -12,7 +12,7 @@ Develop on OSX
 
 首先安装Homebrew，OSX中自带了ruby，所以Homebrew安装起来也非常容易：
 
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
 ### zsh
