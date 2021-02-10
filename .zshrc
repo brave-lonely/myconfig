@@ -113,14 +113,13 @@ alias  tldrl="tldr -p linux"
 alias  tldrm="tldr -p osx"
 alias  vblist="VBoxManage  list vms"
 alias  vblist_run="VBoxManage  list runningvms"
-alias  start_wg0="sudo wg-quick  up wg0"
-alias  stop_wg0="sudo wg-quick  down wg0"
+
 
 
 
 # 开启termial代理
-# export http_proxy="http://127.0.0.1:8118"
-# export https_proxy="https://127.0.0.1:8118"
+export http_proxy="http://127.0.0.1:4780"
+export https_proxy="https://127.0.0.1:4780"
 
 # 设置命令行vi模式
 set -o vi 
