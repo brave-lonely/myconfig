@@ -54,7 +54,7 @@ plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 
 # User configuration
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
 
 export LDFLAGS="-L/usr/local/opt/openresty-openssl/lib"
@@ -66,7 +66,7 @@ export PATH="/usr/local/sbin:/usr/local/opt/openresty-openssl/bin:/usr/local/opt
 
 
 
-export HOMEBREW_GITHUB_API_TOKEN="911874f2320928cc81014207a0e96ab7c0f1ac16"
+export HOMEBREW_GITHUB_API_TOKEN="9965663af531853c567b77b4f201e2ab58045caf"
 
 
 
@@ -119,7 +119,7 @@ alias  vblist_run="VBoxManage  list runningvms"
 
 # 开启termial代理
 export http_proxy="http://127.0.0.1:4780"
-export https_proxy="https://127.0.0.1:4780"
+export https_proxy="http://127.0.0.1:4780"
 
 # 设置命令行vi模式
 set -o vi 
@@ -127,9 +127,11 @@ set -o vi
 setopt nonomatch
 
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-#[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 start_machine(){
@@ -139,4 +141,7 @@ start_machine(){
 stop_machine(){
   VBoxManage controlvm $1 poweroff
 }
+
+
+
 
