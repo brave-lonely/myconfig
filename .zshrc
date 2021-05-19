@@ -56,18 +56,18 @@ plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
+export MIGRATIONS=$HOME/workspace/java/dg/dg-trade-migration
+
 
 export LDFLAGS="-L/usr/local/opt/openresty-openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openresty-openssl/include"
 
-export PATH="$HOME/bin:~/workspace/devtool/protoc-3.3.0-osx-x86_64/bin:/usr/local/opt/maven@3.5/bin:$PATH"
+export PATH="$HOME/bin:$MIGRATIONS/bin:/usr/local/opt/maven@3.5/bin:$PATH"
 export PATH="/usr/local/sbin:/usr/local/opt/openresty-openssl/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
-# export PATH="/usr/local/opt/go@1.10/bin:$PATH"
 
 
 
-export HOMEBREW_GITHUB_API_TOKEN="9965663af531853c567b77b4f201e2ab58045caf"
-
+export HOMEBREW_GITHUB_API_TOKEN="225d1fb418efad044b46bfef369d9aa438632480"
 
 
 
