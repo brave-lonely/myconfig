@@ -50,24 +50,25 @@ ZSH_THEME="apple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z vi-mode osx colored-man-pages docker  docker-compose)
+plugins=(git z vi-mode osx colored-man-pages docker  docker-compose  jhipster)
 
 # User configuration
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
 export HBASE_HOME=/usr/local/Cellar/hbase/1.2.2/libexec
 export MIGRATIONS=$HOME/workspace/java/dg/dg-trade-migration
+export MAVEN_HOME=$HOME/.m2/wrapper/dists/apache-maven-3.6.1-bin/38pn40mp89t5c94bjdbeod370m/apache-maven-3.6.1
 
 
 export LDFLAGS="-L/usr/local/opt/openresty-openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openresty-openssl/include"
 
-export PATH="$HOME/bin:$MIGRATIONS/bin:/usr/local/opt/maven@3.5/bin:$PATH"
+export PATH="$HOME/bin:$MIGRATIONS/bin:$MAVEN_HOME/bin:$PATH"
 export PATH="/usr/local/sbin:/usr/local/opt/openresty-openssl/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
 
 
 
-export HOMEBREW_GITHUB_API_TOKEN="225d1fb418efad044b46bfef369d9aa438632480"
+export HOMEBREW_GITHUB_API_TOKEN="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"
 
 
 
@@ -111,6 +112,8 @@ source $ZSH/oh-my-zsh.sh
 alias  mongod="mongod --dbpath ~/data/mongo --logpath ~/data/mongo.log &"
 alias  tldrl="tldr -p linux"
 alias  tldrm="tldr -p osx"
+alias  sed="gsed"
+alias  gp="git pull --rebase"
 alias  vblist="VBoxManage  list vms"
 alias  vblist_run="VBoxManage  list runningvms"
 
